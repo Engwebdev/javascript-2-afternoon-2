@@ -18,6 +18,9 @@ var arr = [10,20,30];
 */
 
 //Code Here
+function first(arr) {
+  return arr[0];
+}
 
 
 
@@ -33,6 +36,9 @@ var arr = [40,50,60];
 */
 
 //Code Here
+function last(arr) {
+  return arr.length - 1;
+}
 
 
 
@@ -48,7 +54,12 @@ var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
 */
 
 //Code Here
-
+function looper(family) {
+  for (let i = 0; i < family.length; i++) {
+    alert(family[i]);
+  }
+}
+looper(family);
 
 
 ////////// PROBLEM 4 //////////
@@ -63,8 +74,12 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
 */
 
 //Code Here
-
-
+function reversedLooper(letters) {
+  for ( let i = letters.length - 1; i >= 0; i-- ) {
+    return alert(letters[i]);
+  }
+}
+reversedLooper(letters);
 
 ////////// PROBLEM 5 //////////
 
@@ -79,6 +94,18 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
 
 //Code Here
 
+function evenFinder(nums) {
+  var evenArr = [];
+  for ( let i = 0; i < nums.length; i++ ) {
+    if ( nums[i] % 2 === 0 ) {
+      evenArr.push(nums[i])
+      
+    }
+    
+  }
+  return evenArr;
+}
+evenFinder(nums);
 
 
 ////////// EXTRA PRACTICE PROBLEMS BELOW //////////
@@ -91,10 +118,14 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 
 /*
   Write a function called divider that is given one argument, numbersArray.
-  Have divider return an Array with the first item in the array being the evens array (all the even values from numbersArray) and the second item in the Array being the odds array (all the odd values from numbersArray).
+  Have divider return an Array with the first item in the array being the evens array (all the even values from numbersArray) 
+  //and the second item in the Array being the odds array (all the odd values from numbersArray).
 */
 
 //Code Here
+function divider(numbersArray) {
+
+}
 
 
 
@@ -108,7 +139,8 @@ var getRandomArbitrary = function() {
 
 /* 
   var numbers = [0,3,4,5,6,7,9,14,17,24,25,26,29,30];
-  Above you're given a function that will return a random number between 0 and 30. There is also a commented out array full of numbers to help you visualize what your function will be receiving.
+  Above you're given a function that will return a random number between 0 and 30.
+  There is also a commented out array full of numbers to help you visualize what your function will be receiving.
   Write a function named finder that will take in an array as an argument.
   It will then  get a random number (by invoking getRandomArbitrary).
   Loop through the array to see if that random number is in the array. 
@@ -116,6 +148,20 @@ var getRandomArbitrary = function() {
 */
 
 //Code Here
+var randNum = getRandomArbitrary();
+
+function finder(array) {
+  for ( let i = 0; i < array.length; i++ ) {
+    if( array[i] ===  randNum) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+}
+var numbers = [0,3,4,5,6,7,9,14,17,24,25,26,29,30];
+
+finder(numbers);
 
 
 
@@ -144,9 +190,23 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
   addItem() --> [];
 */
 
-//Code Here
-
-
+//Code 
+function removeItem(myGroceryList, item) {
+  for ( let i = 0; i < myGroceryList.length; i++ ) {
+    if(myGroceryList[i] === item) {
+      myGroceryList.splice(i, 1);
+    }
+  }
+}
+function addItem(myGroceryList, item) {
+for( let i = 0; i < myGroceryList.length; i++ ) {
+  if( myGroceryList[i] !== item ) {
+    myGroceryList.push(myGroceryList[i])
+    return myGroceryList;
+  }
+}
+}
+addItem(myGroceryList, "Milk")
 
 ////////// PROBLEM 9 //////////
 
@@ -155,6 +215,14 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
 //Code Here
+var arr = [];
+function maker(arr) {
+  for ( let i = 1; i < 215; i++ ) {
+    arr.push(i)
+  }
+   return arr;
+}
+maker(arr);
 
 
 
@@ -171,6 +239,14 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 */
   
 //Code Here
+var newAr = [15, 19, 26, 29, 35, 44, 58];
+function addTen(numbers) {
+    for ( let i = 0; i < numbers.length; i++ ) {
+       numbers[i] += 10
+    }
+    return numbers;
+}
+addTen(newAr);
 
 
 
@@ -196,7 +272,15 @@ for(var i = 0; i < num2; i++){
 */
 
 //Code Here
+function longer(arr1, arr2) {
+    if ( arr1.length > arr2.length ) {
+      return arr1;
+    } else{
+      return arr2;
+    }
 
+}
+longer( arr1, arr2 );
 
 
 /*
